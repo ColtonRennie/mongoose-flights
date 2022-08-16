@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+    <br>
+    <form action="/tickets/<%= ticketId %>/" method="POST">
+        <fieldset>
+            <label for="seatField">Seat Selection:
+          <input type="text" name="seat" required pattern="[A-F][1-9]\d?" placeholder="Format ex: A1 - F99">
+        </label><br>
+            <label for="priceField">Price Range:
+          <input type="number" name="price" placeholder="$0 Min">
+        </label><br>
+            <div class="float-right">
+                <input type="submit" value="Add Ticket">
+            </div>
+    </form>
+    <br>
+   <%- include('../partials/footer.ejs') %>
